@@ -1,5 +1,24 @@
-# Vue 3 + Vite
+# Taskify
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Простой To-Do список на Vue 3 с использованием Vite и Tailwind CSS.  
+Идеальный проект для портфолио, демонстрирующий навыки работы с современным фронтенд-стеком.
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+---
+
+## Технологии
+
+- **Vue 3** — прогрессивный фронтенд-фреймворк  
+- **Vite** — быстрый сборщик и дев-сервер  
+- **Tailwind CSS** — утилитарный CSS-фреймворк  
+- **PostCSS** — для обработки CSS  
+- **JavaScript (ES2025)**
+
+---
+
+## Установка
+
+Клонируй репозиторий и перейди в папку проекта:
+
+```bash
+git clone https://github.com/твой_ник/taskify.git
+cd taskify
