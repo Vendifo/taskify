@@ -8,6 +8,7 @@
 			:tasks="filteredTasks"
 			@toggle-done="toggleDone"
 			@delete-task="deleteTask"
+			@save-edit="saveEdit"
 		/>
 	</div>
 </template>
@@ -55,5 +56,14 @@ function toggleDone(taskId) {
 function deleteTask(taskId) {
 	tasks.value = tasks.value.filter((t) => t.id !== taskId);
 	saveTasks(tasks.value);
+}
+
+
+function saveEdit({ id, text}) {
+	const task = tasks.value.find((t) => t.id === id) 
+	if (task) {
+		task.text = text
+		saveTasks(tasks.value)
+	}
 }
 </script>
