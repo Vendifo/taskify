@@ -14,7 +14,10 @@
 
 			<span
 				v-else
-				:class="{ 'line-through text-gray-400': task.done, 'cursor-pointer': true}"
+				:class="{
+					'line-through text-gray-400': task.done,
+					'cursor-pointer': true,
+				}"
 				class="text-base font-medium text-gray-800 break-words"
 				@click="$emit('start-edit', task.id)"
 			>
@@ -66,8 +69,14 @@ watch(
 
 function saveEdit() {
 	const trimed = editedText.value.trim();
-	if (trimed && trimed !== props.task.text) {
+	if (!trimed) {
+		emit("save-edit", null);
+		return;
+	}
+	if (trimed !== props.task.text) {
 		emit("save-edit", { id: props.task.id, text: trimed });
+	} else {
+		emit("save-edit", null);
 	}
 }
 </script>
